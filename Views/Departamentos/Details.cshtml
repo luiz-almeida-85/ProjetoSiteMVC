@@ -1,0 +1,49 @@
+﻿@model ProjetoSiteMVC.Departamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<selection class="wrapper">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="content-panel" style="padding:20px">
+                <h2>Details</h2>
+
+                <div>
+                    <h4>Departamento</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Descricao)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Editar", "Edit", null, new { id = Model.Id, @class = "btn btn-success" }) |
+                    @Html.ActionLink("Voltar par Lista", "Index",null, new { @class = "btn btn-success" })
+                </p>
+
+            </div>
+        </div>
+    </div>
+</selection>
+
+
+
